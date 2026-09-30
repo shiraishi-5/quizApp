@@ -37,8 +37,7 @@ const openDetail = (quizHistory: QuizHistory) => {
 <style scoped>
 .history-area {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .detail {

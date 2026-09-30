@@ -6,7 +6,7 @@ import StartQuiz from "@/components/QuizApp/StartQuiz.vue";
 
 <template>
   <main>
-    <p>テスト1</p>
+    <p>URLに <span>/quizApp</span> を付けるとクイズ画面に遷移できます</p>
   </main>
 </template>
 
@@ -17,5 +17,15 @@ main {
 
   justify-content: center;
   align-items: center;
+}
+
+p {
+  color: gray;
+}
+
+span {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 </style>

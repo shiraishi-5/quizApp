@@ -7,6 +7,7 @@ import type { Answer, QuizSection } from "@/script/types.ts";
 import Card from "../Card.vue";
 import { useQuizInfoStore } from "@/stores/quizInfo.ts";
 import QuizHistory from "./QuizHistory.vue";
+import QuizCategory from "./QuizCategory.vue";
 
 const quizInfo = useQuizInfoStore();
 
@@ -51,12 +52,13 @@ const playQuiz = (answer: Answer) => {
         @to-start="sectionController"
       ></FinishQuiz>
     </Card>
+    
+    <QuizHistory
+      v-if="quizInfo.quizSection === 'START'"
+      :quiz-histories="quizInfo.quizHistories"
+    />
   </div>
 
-  <QuizHistory
-    v-if="quizInfo.quizSection === 'START'"
-    :quiz-histories="quizInfo.quizHistories"
-  />
 </template>
 
 <style scoped>
@@ -66,5 +68,7 @@ const playQuiz = (answer: Answer) => {
 
   justify-content: center;
   align-items: center;
+
+  max-width: 1200px;
 }
 </style>

@@ -112,7 +112,7 @@ export const useQuizInfoStore = defineStore("quizInfo", () => {
     remainTime.value = ANSWER_TIME;
 
     timerId = window.setInterval(() => {
-      remainTime.value -= 0.1;
+      remainTime.value = Math.max(0,remainTime.value - 0.1);
 
       if (remainTime.value <= 0) {
         answerTimeout();

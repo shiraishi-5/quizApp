@@ -1,3 +1,5 @@
+import type { QUIZ_CATEGORY } from "./constants";
+
 export type User = {
   id: number;
   name: string;
@@ -86,3 +88,6 @@ export type QuizHistory = {
   questions: Question[];
   playerAnswers: Answer[];
 };
+
+export type QuizCategory = (typeof QUIZ_CATEGORY)[keyof typeof QUIZ_CATEGORY];
+
