@@ -6,7 +6,7 @@ import StartQuiz from "@/components/QuizApp/StartQuiz.vue";
 
 <template>
   <main>
-    
+    <p>テスト</p>
   </main>
 </template>
 
